@@ -1,0 +1,62 @@
+<div>
+    <div class="col-xs-2">
+    
+    <h3>Create Product Form</h3>
+    <div *ngIf="!submitted" class="for-group" style="width: 300px;">
+    <form (ngSubmit)="onSubmit()">
+                <div class="form-group>">
+                <label >Product Id</label><input type="number" 
+                            class="form-control" name="productId" 
+                            [(ngModel)]="product.productId"/>
+                </div>
+                <div class="form-group>">
+                <label >Product name</label><input type="text" 
+                            class="form-control" name="productName"
+                             [(ngModel)]="product.productName"/>
+                </div>
+                <div class="form-group>">
+                <label >Product Code</label><input type="text"
+                            class="form-control" name="productCode"
+                             [(ngModel)]="product.productCode"/>
+                </div>
+                <div class="form-group>">
+                <label >Release Date</label><input type="date" 
+                            class="form-control" name="releaseDate"
+                             [(ngModel)]="product.releaseDate"/>
+                </div>
+                <div class="form-group>">
+                <label >Description</label><input type="text" 
+                            class="form-control" name="description" 
+                            [(ngModel)]="product.description"/>
+                </div>
+                <div class="form-group>">
+                <label >Price</label><input type="number" 
+                            class="form-control" name="price" 
+                            [(ngModel)]="product.price"/>
+                </div>
+                <div class="form-group>">
+                <label >Star Rating</label><input type="number" 
+                            class="form-control" name="starRating"
+                             [(ngModel)]="product.starRating"/>
+                </div>
+                <div class="form-group>">
+                <label >Image Url</label><input type="url" 
+                            class="form-control" name="imageUrl" 
+                            [(ngModel)]="product.imageUrl"/>
+                </div>
+                <div><br>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" (click)="goBack()">Back</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>         
+         </form>
+    </div>
+</div>
+<div *ngIf="submitted">
+	<div class="btn-group ">
+		<h4>You submitted successfully!</h4>
+		<button class="btn btn-primary" (click)="goBack()">Back</button>
+		<button class="btn btn-success" (click)="newProduct()">Add</button>
+	</div>
+</div>

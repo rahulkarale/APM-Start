@@ -1,0 +1,22 @@
+<!--The whole content below can be removed with the new code.-->
+<!--<div style="text-align:center">
+  <h1>
+     Welcome to {{title}}!!
+  </h1>
+  ... Starter Files ...
+</div>-->
+<div >
+  <nav class="navbar navbar-defaultg">
+    <div class="container-fluid">
+      <a class="navbar-brand">{{pageTitle}}</a>
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/welcome']">Home</a></li>
+        <li><a [routerLink]="['/products']">Product</a></li>
+        <li><a [routerLink]="['/example']">Add Product</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </nav>
+</div>
